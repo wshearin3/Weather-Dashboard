@@ -31,22 +31,22 @@ fetch(queryURL)
 .then(function (data){
 console.log(data);
 var weatherDate = data.dt;
-console.log(weatherDate);
+//console.log(weatherDate);
 var convertDate = new Date(weatherDate * 1000);
 var cleanDate = convertDate.toDateString();
-console.log(cleanDate);
+//console.log(cleanDate);
 cityHeader.textContent = data.name + ": " + cleanDate;
 var tempKelvin = data.main.temp;
-console.log(tempKelvin);
+//console.log(tempKelvin);
 var tempFarenheit = (tempKelvin - 273.15) * 9 / 5 + 32;
-console.log(tempFarenheit);
+//console.log(tempFarenheit);
 var cleanTempFarenheit = parseInt(tempFarenheit);
-console.log(cleanTempFarenheit);
+//console.log(cleanTempFarenheit);
 cityTemperature.textContent = "Temperature: " + cleanTempFarenheit + "°F";
 var windMS = data.wind.speed;
-console.log(windMS);
+//console.log(windMS);
 var windMPH = windMS * 2.237;
-console.log(windMPH);
+//console.log(windMPH);
 var cleanWind = parseInt(windMPH);
 cityWind.textContent = "Wind: " + cleanWind + "MPH";
 cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
@@ -55,6 +55,20 @@ cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 }
 
 function getForecastAPI() {
-    var addtlQueryURL = ""
-}
+    var addtlQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
 
+    var card1Date = document.getElementById("day1Date")
+
+    fetch(addtlQueryURL)
+.then(function (response){
+    return response.json();
+})
+.then(function (data){
+    //console.log(data)
+    console.log(data.list[7].main.temp_max)
+    var day01Date = data.list[7].dt;
+    var convertDay1Date = new Date(day01Date * 1000);
+    var cleanDay1Date = convertDay1Date.toDateString();
+    card1Date.textContent = cleanDay1Date;
+});
+}
