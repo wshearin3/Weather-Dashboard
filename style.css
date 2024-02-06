@@ -11,5 +11,10 @@ header{
 }
 .sidebar{
     background-color: lightblue;
-    width: 150px;
+    width: 180px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
 }
