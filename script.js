@@ -175,5 +175,12 @@ card5Humidity.textContent = "Humidity: " + data.list[39].main.humidity + "%";
 //##### SETTING WIND IN FORECAST CARDS ######
 //     ##################################
 
+var day1WindMS = data.list[7].wind.speed;
+var day1WindMPH = day1WindMS * 2.237;
+var day1CleanWind = parseInt(day1WindMPH);
+card1Wind.textContent = "Wind: " + day1CleanWind + "MPH";
+
+
+
 });
 }
