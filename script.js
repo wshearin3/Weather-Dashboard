@@ -69,17 +69,11 @@ function getForecastAPI() {
     var card4Icon = document.getElementById("day4Pic");
     var card5Icon = document.getElementById("day5Pic");
 
-    var card1HiTemp = document.getElementById("day1TempHi");
-    var card2HiTemp = document.getElementById("day2TempHi");
-    var card3HiTemp = document.getElementById("day3TempHi");
-    var card4HiTemp = document.getElementById("day4TempHi");
-    var card5HiTemp = document.getElementById("day5TempHi");
-
-    var card1LoTemp = document.getElementById("day1TempLo");
-    var card2LoTemp = document.getElementById("day2TempLo");
-    var card3LoTemp = document.getElementById("day3TempLo");
-    var card4LoTemp = document.getElementById("day4TempLo");
-    var card5LoTemp = document.getElementById("day5TempLo");
+    var card1Temp = document.getElementById("day1TempHi");
+    var card2Temp = document.getElementById("day2TempHi");
+    var card3Temp = document.getElementById("day3TempHi");
+    var card4Temp = document.getElementById("day4TempHi");
+    var card5Temp = document.getElementById("day5TempHi");
 
     var card1Humidity = document.getElementById("day1Humidity");
     var card2Humidity = document.getElementById("day2Humidity");
@@ -139,36 +133,33 @@ function getForecastAPI() {
 //##### SETTING HI TEMPS IN FORECAST CARDS ######
 //     #####################################
 
-    var day1TempKelvin = data.list[7].main.temp_max;
+    var day1TempKelvin = data.list[7].main.temp;
+    console.log(day1TempKelvin);
     var day1TempFarenheit = (day1TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay1TempFarenheit = parseInt(day1TempFarenheit);
-    card1HiTemp.textContent = "High: " + cleanDay1TempFarenheit + "°F";
+    card1Temp.textContent = "Temp: " + cleanDay1TempFarenheit + "°F";
 
-    var day2TempKelvin = data.list[15].main.temp_max;
+    var day2TempKelvin = data.list[15].main.temp;
     var day2TempFarenheit = (day2TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay2TempFarenheit = parseInt(day2TempFarenheit);
-    card2HiTemp.textContent = "High: " + cleanDay2TempFarenheit + "°F";
+    card2Temp.textContent = "Temp: " + cleanDay2TempFarenheit + "°F";
 
-    var day3TempKelvin = data.list[23].main.temp_max;
+    var day3TempKelvin = data.list[23].main.temp;
     var day3TempFarenheit = (day3TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay3TempFarenheit = parseInt(day3TempFarenheit);
-    card3HiTemp.textContent = "High: " + cleanDay3TempFarenheit + "°F";
+    card3Temp.textContent = "Temp: " + cleanDay3TempFarenheit + "°F";
 
-    var day4TempKelvin = data.list[31].main.temp_max;
+    var day4TempKelvin = data.list[31].main.temp;
     var day4TempFarenheit = (day4TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay4TempFarenheit = parseInt(day4TempFarenheit);
-    card4HiTemp.textContent = "High: " + cleanDay4TempFarenheit + "°F";
+    card4Temp.textContent = "Temp: " + cleanDay4TempFarenheit + "°F";
 
-    var day5TempKelvin = data.list[39].main.temp_max;
+    var day5TempKelvin = data.list[39].main.temp;
     var day5TempFarenheit = (day5TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay5TempFarenheit = parseInt(day5TempFarenheit);
-    card5HiTemp.textContent = "High: " + cleanDay5TempFarenheit + "°F";
+    card5Temp.textContent = "Temp: " + cleanDay5TempFarenheit + "°F";
 
 
-
-//     #####################################
-//##### SETTING LO TEMPS IN FORECAST CARDS ######
-//     #####################################
 
 //     #####################################
 //##### SETTING HUMIDITY IN FORECAST CARDS ######
