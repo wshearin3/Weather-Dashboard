@@ -71,7 +71,7 @@ function getForecastAPI() {
     //console.log(data)
 
     //     ##################################
-    //##### SETTING DATES in FORECAST CARDS ######
+    //##### SETTING DATES IN FORECAST CARDS ######
     //     ##################################
 
     console.log(data.list[7].main.temp_max)
@@ -79,6 +79,12 @@ function getForecastAPI() {
     var convertDay1Date = new Date(day01Date * 1000);
     var cleanDay1Date = convertDay1Date.toDateString();
     card1Date.textContent = cleanDay1Date;
+
+    console.log(data.list[15].main.temp_max)
+    var day02Date = data.list[15].dt;
+    var convertDay2Date = new Date(day02Date * 1000);
+    var cleanDay2Date = convertDay2Date.toDateString();
+    card2Date.textContent = cleanDay2Date;
 
 });
 }
