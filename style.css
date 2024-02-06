@@ -18,6 +18,7 @@ h2 {
 .sidebar{
     background-color: lightblue;
     width: 180px;
+    border: 2px solid black;
 }
 
 main{
@@ -46,4 +47,7 @@ list-style: none;
 list-style-type: none;
 padding-right: 25px;
 
+}
+.forecastDate{
+    font-weight:bold;
 }
