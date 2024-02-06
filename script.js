@@ -23,6 +23,7 @@ var cityHeader = document.getElementById("location");
 var cityTemperature = document.getElementById("temperature");
 var cityWind = document.getElementById("wind");
 var cityHumidity = document.getElementById("humidity");
+var cityIcon = document.getElementById("topIcon");
 
 fetch(queryURL)
 .then(function (response){
