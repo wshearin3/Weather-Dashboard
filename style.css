@@ -9,6 +9,12 @@ header{
     display: flex;
     justify-content: center;
 }
+#location{
+    padding-left: 10px;
+}
+h2 {
+    padding-left: 10px;
+}
 .sidebar{
     background-color: lightblue;
     width: 180px;
@@ -18,16 +24,26 @@ main{
     display: flex;
     flex-direction: row;
 }
+#day1Card{
+    margin-left: 5px;
+}
 #conditions li{
 list-style: none;
 }
 #dayCards{
     display: flex;
-    flex-direction: row;
-    align-items: left;
-    
+    flex-wrap: wrap;
+          
 }
-
+#dayCards ul{
+    border: 3px solid black;
+    border-radius: 2px;
+    margin-left: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
 #dayCards li{
 list-style-type: none;
+padding-right: 25px;
+
 }
