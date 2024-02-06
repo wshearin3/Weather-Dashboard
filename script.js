@@ -23,6 +23,7 @@ var cityHeader = document.getElementById("location");
 var cityTemperature = document.getElementById("temperature");
 var cityWind = document.getElementById("wind");
 var cityHumidity = document.getElementById("humidity");
+var card0Icon = document.getElementById("day0Pic");
 
 fetch(queryURL)
 .then(function (response){
@@ -50,6 +51,46 @@ var windMPH = windMS * 2.237;
 var cleanWind = parseInt(windMPH);
 cityWind.textContent = "Wind: " + cleanWind + " MPH";
 cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
+
+day0IconId = data.weather[0].icon;
+console.log(day0IconId);
+     if (day0IconId == "01d") {
+        card0Icon.src = "./weather_icons/01d.png";
+     } else if (day0IconId == "01n") {
+        card0Icon.src = "./weather_icons/01n.png";
+     } else if (day0IconId == "02d") {
+        card0Icon.src = "./weather_icons/02d.png";
+     } else if (day0IconId == "02n") {
+        card0Icon.src = "./weather_icons/02n.png";
+     } else if (day0IconId == "03d") {
+        card0Icon.src = "./weather_icons/03d.png";
+     } else if (day0IconId == "03n") {
+        card0Icon.src = "./weather_icons/03n.png";
+     } else if (day0IconId == "04d") {
+        card0Icon.src = "./weather_icons/04d.png";
+     } else if (day0IconId == "04n") {
+        card0Icon.src = "./weather_icons/04n.png";
+     } else if (day0IconId == "09d") {
+        card0Icon.src = "./weather_icons/09d.png";
+     } else if (day0IconId == "09n") {
+        card0Icon.src = "./weather_icons/09n.png";
+     } else if (day0IconId == "10d") {
+        card0Icon.src = "./weather_icons/10d.png";
+     } else if (day0IconId == "10n") {
+        card0Icon.src = "./weather_icons/10n.png";
+     } else if (day0IconId == "11d") {
+        card0Icon.src = "./weather_icons/11d.png";
+     } else if (day0IconId == "11n") {
+        card0Icon.src = "./weather_icons/11n.png";
+     } else if (day0IconId == "13d") {
+        card0Icon.src = "./weather_icons/13d.png";
+     } else if (day0IconId == "13n") {
+        card0Icon.src = "./weather_icons/13n.png";
+     } else if (day0IconId == "50d") {
+        card0Icon.src = "./weather_icons/50d.png";
+     } else if (day0IconId == "50n") {
+        card0Icon.src = "./weather_icons/50n.png";
+     }
 
 });
 }
