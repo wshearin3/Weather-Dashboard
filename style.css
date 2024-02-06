@@ -21,3 +21,13 @@ main{
 #conditions li{
 list-style: none;
 }
+#dayCards{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    
+}
+
+#dayCards li{
+list-style-type: none;
+}
