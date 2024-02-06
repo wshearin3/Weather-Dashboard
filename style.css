@@ -18,3 +18,6 @@ main{
     display: flex;
     flex-direction: row;
 }
+#conditions li{
+list-style: none;
+}
