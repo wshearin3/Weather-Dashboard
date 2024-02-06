@@ -86,5 +86,20 @@ function getForecastAPI() {
     var cleanDay2Date = convertDay2Date.toDateString();
     card2Date.textContent = cleanDay2Date;
 
+    var day03Date = data.list[23].dt;
+    var convertDay3Date = new Date(day03Date * 1000);
+    var cleanDay3Date = convertDay3Date.toDateString();
+    card3Date.textContent = cleanDay3Date;
+
+    var day04Date = data.list[31].dt;
+    var convertDay4Date = new Date(day04Date * 1000);
+    var cleanDay4Date = convertDay4Date.toDateString();
+    card4Date.textContent = cleanDay4Date;
+
+    var day05Date = data.list[39].dt;
+    var convertDay5Date = new Date(day05Date * 1000);
+    var cleanDay5Date = convertDay5Date.toDateString();
+    card5Date.textContent = cleanDay5Date;
+
 });
 }
