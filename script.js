@@ -69,11 +69,11 @@ function getForecastAPI() {
     var card4Icon = document.getElementById("day4Pic");
     var card5Icon = document.getElementById("day5Pic");
 
-    var card1Temp = document.getElementById("day1TempHi");
-    var card2Temp = document.getElementById("day2TempHi");
-    var card3Temp = document.getElementById("day3TempHi");
-    var card4Temp = document.getElementById("day4TempHi");
-    var card5Temp = document.getElementById("day5TempHi");
+    var card1Temp = document.getElementById("day1Temp");
+    var card2Temp = document.getElementById("day2Temp");
+    var card3Temp = document.getElementById("day3Temp");
+    var card4Temp = document.getElementById("day4Temp");
+    var card5Temp = document.getElementById("day5Temp");
 
     var card1Humidity = document.getElementById("day1Humidity");
     var card2Humidity = document.getElementById("day2Humidity");
