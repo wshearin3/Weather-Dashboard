@@ -139,6 +139,33 @@ function getForecastAPI() {
 //##### SETTING HI TEMPS IN FORECAST CARDS ######
 //     #####################################
 
+    var day1TempKelvin = data.list[7].main.temp_max;
+    var day1TempFarenheit = (day1TempKelvin - 273.15) * 9 / 5 + 32;
+    var cleanDay1TempFarenheit = parseInt(day1TempFarenheit);
+    card1HiTemp.textContent = "High: " + cleanDay1TempFarenheit + "°F";
+
+    var day2TempKelvin = data.list[15].main.temp_max;
+    var day2TempFarenheit = (day2TempKelvin - 273.15) * 9 / 5 + 32;
+    var cleanDay2TempFarenheit = parseInt(day2TempFarenheit);
+    card2HiTemp.textContent = "High: " + cleanDay2TempFarenheit + "°F";
+
+    var day3TempKelvin = data.list[23].main.temp_max;
+    var day3TempFarenheit = (day3TempKelvin - 273.15) * 9 / 5 + 32;
+    var cleanDay3TempFarenheit = parseInt(day3TempFarenheit);
+    card3HiTemp.textContent = "High: " + cleanDay3TempFarenheit + "°F";
+
+    var day4TempKelvin = data.list[31].main.temp_max;
+    var day4TempFarenheit = (day4TempKelvin - 273.15) * 9 / 5 + 32;
+    var cleanDay4TempFarenheit = parseInt(day4TempFarenheit);
+    card4HiTemp.textContent = "High: " + cleanDay4TempFarenheit + "°F";
+
+    var day5TempKelvin = data.list[39].main.temp_max;
+    var day5TempFarenheit = (day5TempKelvin - 273.15) * 9 / 5 + 32;
+    var cleanDay5TempFarenheit = parseInt(day5TempFarenheit);
+    card5HiTemp.textContent = "High: " + cleanDay5TempFarenheit + "°F";
+
+
+
 //     #####################################
 //##### SETTING LO TEMPS IN FORECAST CARDS ######
 //     #####################################
