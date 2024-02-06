@@ -38,5 +38,12 @@ console.log(tempFarenheit);
 var cleanTempFarenheit = parseInt(tempFarenheit);
 console.log(cleanTempFarenheit);
 cityTemperature.textContent = "Temperature: " + cleanTempFarenheit + "°F";
+var windMS = data.wind.speed;
+console.log(windMS);
+var windMPH = windMS * 2.237;
+console.log(windMPH);
+var cleanWind = parseInt(windMPH);
+cityWind.textContent = "Wind: " + cleanWind + "MPH";
+cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 });
 }
