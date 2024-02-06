@@ -132,10 +132,42 @@ function getForecastAPI() {
    
     day1IconId = data.list[7].weather[0].icon;
     console.log(day1IconId);
-     if (day1IconId == "01n") {
-        card1Icon.src = "./weather_icons/01n.png";
-     } else if (day1IconId == "01d") {
+     if (day1IconId == "01d") {
         card1Icon.src = "./weather_icons/01d.png";
+     } else if (day1IconId == "01n") {
+        card1Icon.src = "./weather_icons/01n.png";
+     } else if (day1IconId == "02d") {
+        card1Icon.src = "./weather_icons/02d.png";
+     } else if (day1IconId == "02n") {
+        card1Icon.src = "./weather_icons/02n.png";
+     } else if (day1IconId == "03d") {
+        card1Icon.src = "./weather_icons/03d.png";
+     } else if (day1IconId == "03n") {
+        card1Icon.src = "./weather_icons/03n.png";
+     } else if (day1IconId == "04d") {
+        card1Icon.src = "./weather_icons/04d.png";
+     } else if (day1IconId == "04n") {
+        card1Icon.src = "./weather_icons/04n.png";
+     } else if (day1IconId == "09d") {
+        card1Icon.src = "./weather_icons/09d.png";
+     } else if (day1IconId == "09n") {
+        card1Icon.src = "./weather_icons/09n.png";
+     } else if (day1IconId == "10d") {
+        card1Icon.src = "./weather_icons/10d.png";
+     } else if (day1IconId == "10n") {
+        card1Icon.src = "./weather_icons/10n.png";
+     } else if (day1IconId == "11d") {
+        card1Icon.src = "./weather_icons/11d.png";
+     } else if (day1IconId == "11n") {
+        card1Icon.src = "./weather_icons/11n.png";
+     } else if (day1IconId == "13d") {
+        card1Icon.src = "./weather_icons/13d.png";
+     } else if (day1IconId == "13n") {
+        card1Icon.src = "./weather_icons/13n.png";
+     } else if (day1IconId == "50d") {
+        card1Icon.src = "./weather_icons/50d.png";
+     } else if (day1IconId == "50n") {
+        card1Icon.src = "./weather_icons/50n.png";
      }
     
 
