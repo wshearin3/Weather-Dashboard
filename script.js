@@ -63,6 +63,36 @@ function getForecastAPI() {
     var card4Date = document.getElementById("day4Date");
     var card5Date = document.getElementById("day5Date");
 
+    var card1Icon = document.getElementById("day1Pic");
+    var card2Icon = document.getElementById("day2Pic");
+    var card3Icon = document.getElementById("day3Pic");
+    var card4Icon = document.getElementById("day4Pic");
+    var card5Icon = document.getElementById("day5Pic");
+
+    var card1HiTemp = document.getElementById("day1TempHi");
+    var card2HiTemp = document.getElementById("day2TempHi");
+    var card3HiTemp = document.getElementById("day3TempHi");
+    var card4HiTemp = document.getElementById("day4TempHi");
+    var card5HiTemp = document.getElementById("day5TempHi");
+
+    var card1LoTemp = document.getElementById("day1TempLo");
+    var card2LoTemp = document.getElementById("day2TempLo");
+    var card3LoTemp = document.getElementById("day3TempLo");
+    var card4LoTemp = document.getElementById("day4TempLo");
+    var card5LoTemp = document.getElementById("day5TempLo");
+
+    var card1Humidity = document.getElementById("day1Humidity");
+    var card2Humidity = document.getElementById("day2Humidity");
+    var card3Humidity = document.getElementById("day3Humidity");
+    var card4Humidity = document.getElementById("day4Humidity");
+    var card5Humidity = document.getElementById("day5Humidity");
+
+    var card1Wind = document.getElementById("day1Wind");
+    var card2Wind = document.getElementById("day2Wind");
+    var card3Wind = document.getElementById("day3Wind");
+    var card4Wind = document.getElementById("day4Wind");
+    var card5Wind = document.getElementById("day5Wind");
+
     fetch(addtlQueryURL)
 .then(function (response){
     return response.json();
@@ -100,6 +130,26 @@ function getForecastAPI() {
     var convertDay5Date = new Date(day05Date * 1000);
     var cleanDay5Date = convertDay5Date.toDateString();
     card5Date.textContent = cleanDay5Date;
+
+//     ##################################
+//##### SETTING ICONS IN FORECAST CARDS ######
+//     ##################################
+
+//     #####################################
+//##### SETTING HI TEMPS IN FORECAST CARDS ######
+//     #####################################
+
+//     #####################################
+//##### SETTING LO TEMPS IN FORECAST CARDS ######
+//     #####################################
+
+//     #####################################
+//##### SETTING HUMIDITY IN FORECAST CARDS ######
+//     #####################################
+
+//     ##################################
+//##### SETTING WIND IN FORECAST CARDS ######
+//     ##################################
 
 });
 }
