@@ -57,7 +57,11 @@ cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 function getForecastAPI() {
     var addtlQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
 
-    var card1Date = document.getElementById("day1Date")
+    var card1Date = document.getElementById("day1Date");
+    var card2Date = document.getElementById("day2Date");
+    var card3Date = document.getElementById("day3Date");
+    var card4Date = document.getElementById("day4Date");
+    var card5Date = document.getElementById("day5Date");
 
     fetch(addtlQueryURL)
 .then(function (response){
@@ -65,10 +69,16 @@ function getForecastAPI() {
 })
 .then(function (data){
     //console.log(data)
+
+    //     ##################################
+    //##### SETTING DATES in FORECAST CARDS ######
+    //     ##################################
+
     console.log(data.list[7].main.temp_max)
     var day01Date = data.list[7].dt;
     var convertDay1Date = new Date(day01Date * 1000);
     var cleanDay1Date = convertDay1Date.toDateString();
     card1Date.textContent = cleanDay1Date;
+
 });
 }
