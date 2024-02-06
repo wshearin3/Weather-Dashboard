@@ -37,6 +37,6 @@ var tempFarenheit = (tempKelvin - 273.15) * 9 / 5 + 32;
 console.log(tempFarenheit);
 var cleanTempFarenheit = parseInt(tempFarenheit);
 console.log(cleanTempFarenheit);
-cityTemperature.textContent = "Temperature: " + cleanTempFarenheit;
+cityTemperature.textContent = "Temperature: " + cleanTempFarenheit + "°F";
 });
 }
