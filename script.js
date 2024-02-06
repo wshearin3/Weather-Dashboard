@@ -19,6 +19,7 @@ function saveCity() {
 function getWeatherAPI(){
 
 var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+var cityHeader = document.getElementById("location");
 
 fetch(queryURL)
 .then(function (response){
@@ -26,5 +27,6 @@ fetch(queryURL)
 })
 .then(function (data){
 console.log(data);
+cityHeader.textContent = data.name;
 });
 }
