@@ -20,6 +20,9 @@ function getWeatherAPI(){
 
 var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 var cityHeader = document.getElementById("location");
+var cityTemperature = document.getElementById("temperature");
+var cityWind = document.getElementById("wind");
+var cityHumidity = document.getElementById("humidity");
 
 fetch(queryURL)
 .then(function (response){
@@ -28,5 +31,12 @@ fetch(queryURL)
 .then(function (data){
 console.log(data);
 cityHeader.textContent = data.name;
+var tempKelvin = data.main.temp;
+console.log(tempKelvin);
+var tempFarenheit = (tempKelvin - 273.15) * 9 / 5 + 32;
+console.log(tempFarenheit);
+var cleanTempFarenheit = parseInt(tempFarenheit);
+console.log(cleanTempFarenheit);
+cityTemperature.textContent = "Temperature: " + cleanTempFarenheit;
 });
 }
