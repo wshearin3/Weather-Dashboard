@@ -6,15 +6,17 @@ function saveCity() {
 
     if (userInput !== "") {
         localStorage.setItem("userCity", userInput);
+        city = localStorage.getItem("userCity");
+        console.log(city);
     } else {
         alert("Please enter a valid city");
     }
 };
 
-city = localStorage.getItem("userCity");
-console.log(city);
+//city = localStorage.getItem("userCity");
+//console.log(city);
 
-function getWeatherAPI(city){
+function getWeatherAPI(){
 
 var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 
@@ -23,6 +25,6 @@ fetch(queryURL)
     return response.json();
 })
 .then(function (data){
-
+console.log(data);
 });
 }
