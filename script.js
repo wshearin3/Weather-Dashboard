@@ -30,7 +30,12 @@ fetch(queryURL)
 })
 .then(function (data){
 console.log(data);
-cityHeader.textContent = data.name;
+var weatherDate = data.dt;
+console.log(weatherDate);
+var convertDate = new Date(weatherDate * 1000);
+var cleanDate = convertDate.toDateString();
+console.log(cleanDate);
+cityHeader.textContent = data.name + ": " + cleanDate;
 var tempKelvin = data.main.temp;
 console.log(tempKelvin);
 var tempFarenheit = (tempKelvin - 273.15) * 9 / 5 + 32;
@@ -45,5 +50,11 @@ console.log(windMPH);
 var cleanWind = parseInt(windMPH);
 cityWind.textContent = "Wind: " + cleanWind + "MPH";
 cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
+
 });
 }
+
+function getForecastAPI() {
+    var addtlQueryURL = ""
+}
+
