@@ -129,6 +129,16 @@ function getForecastAPI() {
 //##### SETTING ICONS IN FORECAST CARDS ######
 //     ##################################
 
+   
+    day1IconId = data.list[7].weather[0].icon;
+    console.log(day1IconId);
+     if (day1IconId == "01n") {
+        card1Icon.src = "./weather_icons/01n.png";
+     } else if (day1IconId == "01d") {
+        card1Icon.src = "./weather_icons/01d.png";
+     }
+    
+
 //     ##################################
 //##### SETTING TEMPS IN FORECAST CARDS ######
 //     ##################################
