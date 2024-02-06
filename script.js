@@ -48,7 +48,7 @@ var windMS = data.wind.speed;
 var windMPH = windMS * 2.237;
 //console.log(windMPH);
 var cleanWind = parseInt(windMPH);
-cityWind.textContent = "Wind: " + cleanWind + "MPH";
+cityWind.textContent = "Wind: " + cleanWind + " MPH";
 cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 
 });
@@ -381,27 +381,27 @@ card5Humidity.textContent = "Humidity: " + data.list[39].main.humidity + "%";
 var day1WindMS = data.list[7].wind.speed;
 var day1WindMPH = day1WindMS * 2.237;
 var day1CleanWind = parseInt(day1WindMPH);
-card1Wind.textContent = "Wind: " + day1CleanWind + "MPH";
+card1Wind.textContent = "Wind: " + day1CleanWind + " MPH";
 
 var day2WindMS = data.list[15].wind.speed;
 var day2WindMPH = day2WindMS * 2.237;
 var day2CleanWind = parseInt(day2WindMPH);
-card2Wind.textContent = "Wind: " + day2CleanWind + "MPH";
+card2Wind.textContent = "Wind: " + day2CleanWind + " MPH";
 
 var day3WindMS = data.list[23].wind.speed;
 var day3WindMPH = day3WindMS * 2.237;
 var day3CleanWind = parseInt(day3WindMPH);
-card3Wind.textContent = "Wind: " + day3CleanWind + "MPH";
+card3Wind.textContent = "Wind: " + day3CleanWind + " MPH";
 
 var day4WindMS = data.list[31].wind.speed;
 var day4WindMPH = day4WindMS * 2.237;
 var day4CleanWind = parseInt(day4WindMPH);
-card4Wind.textContent = "Wind: " + day4CleanWind + "MPH";
+card4Wind.textContent = "Wind: " + day4CleanWind + " MPH";
 
 var day5WindMS = data.list[39].wind.speed;
 var day5WindMPH = day5WindMS * 2.237;
 var day5CleanWind = parseInt(day5WindMPH);
-card5Wind.textContent = "Wind: " + day5CleanWind + "MPH";
+card5Wind.textContent = "Wind: " + day5CleanWind + " MPH";
 
 
 
