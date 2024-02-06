@@ -129,9 +129,9 @@ function getForecastAPI() {
 //##### SETTING ICONS IN FORECAST CARDS ######
 //     ##################################
 
-//     #####################################
-//##### SETTING HI TEMPS IN FORECAST CARDS ######
-//     #####################################
+//     ##################################
+//##### SETTING TEMPS IN FORECAST CARDS ######
+//     ##################################
 
     var day1TempKelvin = data.list[7].main.temp;
     console.log(day1TempKelvin);
@@ -164,6 +164,12 @@ function getForecastAPI() {
 //     #####################################
 //##### SETTING HUMIDITY IN FORECAST CARDS ######
 //     #####################################
+
+card1Humidity.textContent = "Humidity: " + data.list[7].main.humidity + "%";
+card2Humidity.textContent = "Humidity: " + data.list[15].main.humidity + "%";
+card3Humidity.textContent = "Humidity: " + data.list[23].main.humidity + "%";
+card4Humidity.textContent = "Humidity: " + data.list[31].main.humidity + "%";
+card5Humidity.textContent = "Humidity: " + data.list[39].main.humidity + "%";
 
 //     ##################################
 //##### SETTING WIND IN FORECAST CARDS ######
