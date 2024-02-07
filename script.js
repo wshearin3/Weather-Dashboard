@@ -7,7 +7,7 @@ function saveCity() {
     if (userInput !== "") {
         localStorage.setItem("userCity", userInput);
         city = localStorage.getItem("userCity");
-        console.log(city);
+        //console.log(city);
     } else {
         alert("Please enter a valid city");
     }
@@ -30,7 +30,7 @@ fetch(queryURL)
     return response.json();
 })
 .then(function (data){
-console.log(data);
+//console.log(data);
 var weatherDate = data.dt;
 //console.log(weatherDate);
 var convertDate = new Date(weatherDate * 1000);
@@ -53,7 +53,7 @@ cityWind.textContent = "Wind: " + cleanWind + " MPH";
 cityHumidity.textContent = "Humidity: " + data.main.humidity + "%";
 
 day0IconId = data.weather[0].icon;
-console.log(day0IconId);
+//console.log(day0IconId);
      if (day0IconId == "01d") {
         card0Icon.src = "./weather_icons/01d.png";
      } else if (day0IconId == "01n") {
@@ -139,13 +139,13 @@ function getForecastAPI() {
     //##### SETTING DATES IN FORECAST CARDS ######
     //     ##################################
 
-    console.log(data.list[7].main.temp_max)
+    //console.log(data.list[7].main.temp_max)
     var day01Date = data.list[7].dt;
     var convertDay1Date = new Date(day01Date * 1000);
     var cleanDay1Date = convertDay1Date.toDateString();
     card1Date.textContent = cleanDay1Date;
 
-    console.log(data.list[15].main.temp_max)
+    //console.log(data.list[15].main.temp_max)
     var day02Date = data.list[15].dt;
     var convertDay2Date = new Date(day02Date * 1000);
     var cleanDay2Date = convertDay2Date.toDateString();
@@ -172,7 +172,7 @@ function getForecastAPI() {
 
    
     day1IconId = data.list[7].weather[0].icon;
-    console.log(day1IconId);
+    //console.log(day1IconId);
      if (day1IconId == "01d") {
         card1Icon.src = "./weather_icons/01d.png";
      } else if (day1IconId == "01n") {
@@ -212,7 +212,7 @@ function getForecastAPI() {
      }
 
      day2IconId = data.list[15].weather[0].icon;
-      console.log(day2IconId);
+      //console.log(day2IconId);
        if (day2IconId == "01d") {
           card2Icon.src = "./weather_icons/01d.png";
        } else if (day2IconId == "01n") {
@@ -252,7 +252,7 @@ function getForecastAPI() {
        }
     
      day3IconId = data.list[23].weather[0].icon;
-     console.log(day3IconId);
+     //console.log(day3IconId);
       if (day3IconId == "01d") {
          card3Icon.src = "./weather_icons/01d.png";
       } else if (day3IconId == "01n") {
@@ -292,7 +292,7 @@ function getForecastAPI() {
       }
 
       day4IconId = data.list[31].weather[0].icon;
-     console.log(day4IconId);
+     //console.log(day4IconId);
       if (day4IconId == "01d") {
          card4Icon.src = "./weather_icons/01d.png";
       } else if (day4IconId == "01n") {
@@ -332,7 +332,7 @@ function getForecastAPI() {
       }
 
       day5IconId = data.list[39].weather[0].icon;
-     console.log(day5IconId);
+     //console.log(day5IconId);
       if (day5IconId == "01d") {
          card5Icon.src = "./weather_icons/01d.png";
       } else if (day5IconId == "01n") {
@@ -378,7 +378,7 @@ function getForecastAPI() {
 //     ##################################
 
     var day1TempKelvin = data.list[7].main.temp;
-    console.log(day1TempKelvin);
+    //console.log(day1TempKelvin);
     var day1TempFarenheit = (day1TempKelvin - 273.15) * 9 / 5 + 32;
     var cleanDay1TempFarenheit = parseInt(day1TempFarenheit);
     card1Temp.textContent = "Temp: " + cleanDay1TempFarenheit + "°F";
